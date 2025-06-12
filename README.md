@@ -14,6 +14,7 @@ A web app to display Japanese kanji with readings and meanings, allowing users t
 - Smooth scrolling to active kanji while reading.
 - Font selector to customize kanji font style.
 - Responsive and user-friendly interface.
+- Dark mode.
 
 ---
 

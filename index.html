@@ -9,10 +9,13 @@
     
 </head>
 <body>
-    <div class="container">
+ <div class="container">
         <header>
             <h1><i class="fas fa-language"></i> Kanji Text-to-Speech Reader</h1>
             <p class="subtitle">Click Play to hear Japanese kanji pronounced with synchronized highlighting. Hover over any kanji to see its reading and meaning.</p>
+            <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </header>
         
         <div class="controls">
@@ -57,6 +60,7 @@
                         <li>Progress indicator</li>
                         <li>Play/pause controls</li>
                         <li>Font selection</li>
+                        <li>Dark/Light mode</li>
                     </ul>
                 </div>
                 
@@ -68,6 +72,7 @@
                         <li>Hover over any kanji for details</li>
                         <li>Click Play again to resume</li>
                         <li>Select different fonts using dropdown</li>
+                        <li>Toggle dark mode with moon icon</li>
                     </ol>
                 </div>
             </div>
@@ -82,7 +87,6 @@
             <p>Text-to-Speech Kanji Reader | Works best in Chrome and Edge browsers</p>
         </footer>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
