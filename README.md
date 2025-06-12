@@ -19,7 +19,7 @@ A web app to display Japanese kanji with readings and meanings, allowing users t
 
 ## Demo
 
-*(Include link to live demo here, if available)*
+*https://zandroj.github.io/Kanji-Text-to-Speech-Reader/*
 
 ---
 
