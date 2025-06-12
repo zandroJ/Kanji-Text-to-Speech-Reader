@@ -1,4 +1,4 @@
-  * {
+      * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -39,6 +39,7 @@
             --footer-border: #eee;
             --theme-toggle-bg: #f1c40f;
             --theme-toggle-icon: #333;
+            --sticky-header-bg: rgba(255, 255, 255, 0.95);
         }
         
         [data-theme="dark"] {
@@ -75,6 +76,7 @@
             --footer-border: #2a2a3a;
             --theme-toggle-bg: #f1c40f;
             --theme-toggle-icon: #0d1b2a;
+            --sticky-header-bg: rgba(30, 30, 40, 0.95);
         }
         
         body {
@@ -95,8 +97,8 @@
             background: var(--container-bg);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
             padding: 25px;
+            /* Removed overflow: hidden which was breaking sticky positioning */
         }
         
         header {
@@ -147,11 +149,24 @@
             font-size: 1.2rem;
         }
         
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--sticky-header-bg);
+            padding: 15px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: -15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
         .controls {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin: 25px 0;
+            margin: 15px 0;
             flex-wrap: wrap;
         }
         
@@ -331,6 +346,10 @@
             .control-btn {
                 padding: 10px 20px;
             }
+            
+            .sticky-header {
+                top: 10px; /* Slightly lower on mobile for better spacing */
+            }
         }
         
         /* Font selector styles */
@@ -377,4 +396,43 @@
         
         .json-value {
             color: var(--json-value);
+        }
+
+        .voice-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            background: var(--font-selector-bg);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .voice-controls label {
+            margin-right: 5px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .voice-controls input[type="range"] {
+            width: 100px;
+        }
+        
+        .voice-slider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .debug-info {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            display: none;
         }

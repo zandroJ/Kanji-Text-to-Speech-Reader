@@ -465,7 +465,7 @@
     {"kanji":"言語","reading":"gengo","meaning":"language"},
     {"kanji":"英語","reading":"eigo","meaning":"English"},
     {"kanji":"文字","reading":"moji","meaning":"some writing (character / letter)"},
-    {"kanji":"ローマ字","reading":"reading","meaning":"Roman alphabet"},
+    {"kanji":"ローマ字","reading":"romaji","meaning":"Roman alphabet"},
     {"kanji":"字","reading":"ji","meaning":"letter"},
     {"kanji":"書き方","reading":"kakikata","meaning":"how to write / way of writing"},
     {"kanji":"覚める","reading":"sameru","meaning":"awake"},

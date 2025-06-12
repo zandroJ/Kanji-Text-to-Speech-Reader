@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanji Text-to-Speech Reader</title>
-    
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
- <div class="container">
+    <div class="container">
         <header>
             <h1><i class="fas fa-language"></i> Kanji Text-to-Speech Reader</h1>
             <p class="subtitle">Click Play to hear Japanese kanji pronounced with synchronized highlighting. Hover over any kanji to see its reading and meaning.</p>
@@ -17,76 +15,97 @@
                 <i class="fas fa-moon"></i>
             </button>
         </header>
-        
-        <div class="controls">
-            <button id="playAllBtn" class="control-btn">
-                <i class="fas fa-play"></i> Play All
-            </button>
-            <button id="pauseBtn" class="control-btn pause">
-                <i class="fas fa-pause"></i> Pause
-            </button>
-        </div>
-        
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
-        
-        <div class="kanji-container" id="kanji-container">
-            <!-- Kanji will be loaded here -->
-            <p>Loading kanji data...</p>
-        </div>
-        
-        <div class="font-selector">
-            <label for="fontSelector"><i class="fas fa-font"></i> Select Font:</label>
-            <select id="fontSelector">
-                <option value="sans-serif">Sans-Serif</option>
-                <option value="serif">Serif</option>
-                <option value="monospace">Monospace</option>
-                <option value="'Yu Mincho', serif">Yu Mincho</option>
-                <option value="'Noto Sans JP', sans-serif">Noto Sans JP</option>
-            </select>
-        </div>
-        
-        <div class="info-panel">
-            <h2><i class="fas fa-info-circle"></i> How It Works</h2>
-            <p>This text-to-speech reader highlights each kanji character as it's pronounced. The system uses the Web Speech API for pronunciation and synchronizes the highlighting with the audio playback.</p>
+
+      <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
             
-            <div class="features">
-                <div class="feature">
-                    <h3><i class="fas fa-lightbulb"></i> Features</h3>
-                    <ul>
-                        <li>Synchronized highlighting</li>
-                        <li>Hover for reading/meaning</li>
-                        <li>Progress indicator</li>
-                        <li>Play/pause controls</li>
-                        <li>Font selection</li>
-                        <li>Dark/Light mode</li>
-                    </ul>
+            <div class="font-selector">
+                <label for="fontSelector"><i class="fas fa-font"></i> Select Font:</label>
+                <select id="fontSelector">
+                    <option value="sans-serif">Sans-Serif</option>
+                    <option value="serif">Serif</option>
+                    <option value="monospace">Monospace</option>
+                    <option value="'Yu Mincho', serif">Yu Mincho</option>
+                    <option value="'Noto Sans JP', sans-serif">Noto Sans JP</option>
+                </select>
+            </div>
+
+        <!-- Sticky header for controls -->
+        <div class="sticky-header">
+            <div class="controls">
+                <button id="playAllBtn" class="control-btn">
+                    <i class="fas fa-play"></i> Play All
+                </button>
+                <button id="pauseBtn" class="control-btn pause">
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+                <div class="voice-controls">
+    <label for="rateControl"><i class="fas fa-tachometer-alt"></i> Speed:</label>
+    <input type="range" id="rateControl" min="0.5" max="2" value="0.9" step="0.1">
+    <span id="rateValue">0.9x</span>
+
+    <label for="pitchControl"><i class="fas fa-sliders-h"></i> Pitch:</label>
+    <input type="range" id="pitchControl" min="0" max="2" value="1" step="0.1">
+    <span id="pitchValue">1.0</span>
+</div>
+
+            </div>
+            
+            
+        </div>
+        
+        <!-- Content layout -->
+        <div class="content-layout">
+            <div class="top-section">
+                <div class="info-panel">
+                    <h2><i class="fas fa-info-circle"></i> How It Works</h2>
+                    <p>This text-to-speech reader highlights each kanji character as it's pronounced. The system uses the Web Speech API for pronunciation and synchronizes the highlighting with the audio playback.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <h3><i class="fas fa-lightbulb"></i> Features</h3>
+                            <ul>
+                                <li>Synchronized highlighting</li>
+                                <li>Hover for reading/meaning</li>
+                                <li>Progress indicator</li>
+                                <li>Play/pause controls</li>
+                                <li>Font selection</li>
+                                <li>Dark/Light mode</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature">
+                            <h3><i class="fas fa-tasks"></i> Instructions</h3>
+                            <ol>
+                                <li>Click "Play All" to start</li>
+                                <li>Use "Pause" to stop temporarily</li>
+                                <li>Hover over any kanji for details</li>
+                                <li>Click Play again to resume</li>
+                                <li>Select different fonts using dropdown</li>
+                                <li>Toggle dark mode with moon icon</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature">
-                    <h3><i class="fas fa-tasks"></i> Instructions</h3>
-                    <ol>
-                        <li>Click "Play All" to start</li>
-                        <li>Use "Pause" to stop temporarily</li>
-                        <li>Hover over any kanji for details</li>
-                        <li>Click Play again to resume</li>
-                        <li>Select different fonts using dropdown</li>
-                        <li>Toggle dark mode with moon icon</li>
-                    </ol>
+                <div class="json-viewer">
+                    <h3>Kanji Data Structure</h3>
+                    <pre id="jsonData">Loading JSON data preview...</pre>
                 </div>
             </div>
-        </div>
-        
-        <div class="json-viewer">
-            <h3>Kanji Data Structure</h3>
-            <pre id="jsonData">Loading JSON data preview...</pre>
+            
+            <div class="kanji-container" id="kanji-container">
+                <!-- Kanji will be loaded here -->
+                <p>Loading kanji data...</p>
+            </div>
         </div>
         
         <footer>
             <p>Text-to-Speech Kanji Reader | Works best in Chrome and Edge browsers</p>
         </footer>
     </div>
-    <script src="script.js"></script>
+
+    <script src="script.js"> </script>
 </body>
 </html>
