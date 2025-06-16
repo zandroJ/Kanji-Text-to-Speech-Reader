@@ -216,6 +216,28 @@
             border: 1px solid var(--kanji-container-border);
         }
         
+        /* Selected starting kanji */
+.kanji-word.selected-start {
+    position: relative;
+    background-color: #a8e6cf;
+    box-shadow: 0 0 0 2px #4CAF50;
+    border-radius: 6px;
+    z-index: 5;
+}
+
+.kanji-word.selected-start::after {
+    content: "START";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    background: #4CAF50;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
         .kanji-word {
             display: inline-block;
             margin: 0 5px;
