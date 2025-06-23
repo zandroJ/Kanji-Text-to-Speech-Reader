@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3">
+    <title>漢字読みリスト</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow-night.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Yu+Mincho&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div style="text-align: center; margin-top: 20px;">
+  <button id="playAllBtn">▶ Play All</button>
+  <button id="pauseBtn">⏸ Pause</button>
+</div>
+
+    <main>
+      <section id="blog-post">
+        <div class="custom-select">
+            <div class="select-header">
+                <span class="selected-option">Monospace</span>
+                <div class="dropdown-arrow">▼</div>
+            </div>
+            <div class="select-options">
+                <div data-value="sans-serif" class="option">Sans-Serif</div>
+                <div data-value="serif" class="option">Serif</div>
+                <div data-value="monospace" class="option">Monospace</div>
+                <div data-value="Yu Mincho" class="option">Yu Mincho</div>
+            </div>
+        </div>
+
+      
+        <p id="kanji-container"></p>
+          
+
+      <br><br>
+
+        </section>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+</html>
