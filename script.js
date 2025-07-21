@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Kanji Reader Functionality
+// Kanji Reader Functionality
     const kanjiContainer = document.getElementById("kanji-container");
     const playBtn = document.getElementById("playAllBtn");
     const pauseBtn = document.getElementById("pauseBtn");
@@ -58,12 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
     rateValue.textContent = `${rateControl.value}x`;
     pitchValue.textContent = `${pitchControl.value}`;
     
-    let kanjiWords = [];
+   let kanjiWords = [];
+    let kanjiData = []; // Store original JSON data
     let utterance = null;
     let currentIndex = 0;
     let isPaused = false;
     let japaneseVoice = null;
-    let selectedStartIndex = -1; // Track user-selected start position
+    let selectedStartIndex = -1; //track user selected start position
 
     // Try to find the best Japanese voice (preferably Google's)
     function findJapaneseVoice() {
@@ -101,19 +102,24 @@ document.addEventListener("DOMContentLoaded", () => {
     
     initVoices();
 
-    function renderKanji(data) {
+function renderKanji(data) {
+        kanjiData = data; // Store original data
         kanjiContainer.innerHTML = "";
         data.forEach((k, index) => {
             const span = document.createElement("span");
             span.className = "kanji-word";
             span.setAttribute("data-reading", k.reading);
             span.setAttribute("data-meaning", k.meaning);
-            span.dataset.index = index; // Store index for click handling
+            span.dataset.index = index;
             span.textContent = k.kanji;
 
             const tooltip = document.createElement("span");
             tooltip.className = "tooltip";
-            tooltip.textContent = `${k.reading} – ${k.meaning}`;
+            // Handle array-based readings
+            const displayReading = Array.isArray(k.reading) 
+                ? k.reading.join(", ") 
+                : k.reading;
+            tooltip.textContent = `${displayReading} – ${k.meaning}`;
 
             span.appendChild(tooltip);
             kanjiContainer.appendChild(span);
@@ -156,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
         progressBar.style.width = `${percent}%`;
     }
 
-    function speakNext() {
+     function speakNext() {
         if (currentIndex >= kanjiWords.length) {
             currentIndex = 0;
             selectedStartIndex = -1;
@@ -164,14 +170,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Clear any previous active reading
         kanjiWords.forEach((w) => w.classList.remove("active-reading"));
-        
-        // Highlight current word
         const currentWord = kanjiWords[currentIndex];
         currentWord.classList.add("active-reading");
 
-        // Scroll to center the active kanji
         currentWord.scrollIntoView({
             behavior: "smooth",
             block: "nearest",
@@ -180,19 +182,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         updateProgress();
 
-        // Get the reading for the current kanji
-        const text = currentWord.getAttribute("data-reading");
-
-        // Cancel any ongoing speech
-        speechSynthesis.cancel(); 
+        // Get reading from stored JSON data
+        const currentItem = kanjiData[currentIndex];
+        let text = "";
         
-        // Create new utterance
+        // Handle different reading formats:
+        if (currentItem.reading) {
+            // Use first reading if array
+            text = Array.isArray(currentItem.reading)
+                ? currentItem.reading[0]
+                : currentItem.reading;
+        } else {
+            // Fallback to kanji if no reading exists
+            text = currentItem.kanji;
+        }
+
+        speechSynthesis.cancel();
         utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = "ja-JP";
         utterance.rate = parseFloat(rateControl.value);
         utterance.pitch = parseFloat(pitchControl.value);
         
-        // Use Google Japanese voice if available
         if (japaneseVoice) {
             utterance.voice = japaneseVoice;
         }
