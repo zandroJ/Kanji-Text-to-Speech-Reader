@@ -866,7 +866,7 @@
   },
   {
     "kanji": "一緒に",
-    "reading": "いしょに",
+    "reading": "いっしょに",
     "meaning": "together"
   },
   {
@@ -3781,7 +3781,7 @@
   },
   {
     "kanji": "天気予報",
-    "reading": "てんきょほう",
+    "reading": "てんきよほう",
     "meaning": "weather forecast"
   },
   {
@@ -3906,7 +3906,7 @@
   },
   {
     "kanji": "出席",
-    "reading": "しゅうせき",
+    "reading": "しゅっせき",
     "meaning": "attendance, presence"
   },
   {
@@ -3976,7 +3976,7 @@
   },
   {
     "kanji": "動物",
-    "reading": "ōぶつ",
+    "reading": "どうぶつ",
     "meaning": "animal"
   },
   {
@@ -3986,7 +3986,7 @@
   },
   {
     "kanji": "不動産屋",
-    "reading": "ふどうさにゃ",
+    "reading": "ふどうさんや",
     "meaning": "real estate agent"
   },
   {
@@ -4246,7 +4246,7 @@
   },
   {
     "kanji": "大型",
-    "reading": "おうがた",
+    "reading": "おおがた",
     "meaning": "large, large scale"
   },
   {
@@ -4491,17 +4491,17 @@
   },
   {
     "kanji": "自習",
-    "reading": "じしゅ",
+    "reading": "じしゅう",
     "meaning": "self-study"
   },
   {
     "kanji": "理由",
-    "reading": "りゆ",
+    "reading": "りゆう",
     "meaning": "cause"
   },
   {
     "kanji": "自由",
-    "reading": "じゆ",
+    "reading": "じゆう",
     "meaning": "freedom"
   },
   {
@@ -4761,7 +4761,7 @@
   },
   {
     "kanji": "ジェット機",
-    "reading": "えっとき",
+    "reading": "ジェットき",
     "meaning": "jet plane"
   },
   {
@@ -5036,7 +5036,7 @@
   },
   {
     "kanji": "記者",
-    "reading": "きっしゃ",
+    "reading": "きしゃ",
     "meaning": "journalist"
   },
   {
@@ -5131,7 +5131,7 @@
   },
   {
     "kanji": "首相",
-    "reading": "しゅうしょう",
+    "reading": "しゅしょう",
     "meaning": "prime minister"
   },
   {
@@ -5521,7 +5521,7 @@
   },
   {
     "kanji": "氷",
-    "reading": "こうり",
+    "reading": "こおり",
     "meaning": "ice"
   },
   {
@@ -5541,7 +5541,7 @@
   },
   {
     "kanji": "凍る",
-    "reading": "こうる",
+    "reading": "こおる",
     "meaning": "freeze, congeal"
   },
   {
@@ -5821,7 +5821,7 @@
   },
   {
     "kanji": "繰り返す",
-    "reading": "くりかいえす",
+    "reading": "くりかえす",
     "meaning": "repeat"
   },
   {
@@ -6111,7 +6111,7 @@
   },
   {
     "kanji": "苦手",
-    "reading": "ねがて",
+    "reading": "にがて",
     "meaning": "weak point, bad"
   },
   {
@@ -6126,7 +6126,7 @@
   },
   {
     "kanji": "不幸",
-    "reading": "ふこ",
+    "reading": "ふこう",
     "meaning": "misfortune, unhappiness, bereavement"
   },
   {
@@ -6296,7 +6296,7 @@
   },
   {
     "kanji": "夫婦",
-    "reading": "ううう",
+    "reading": "ふうふ",
     "meaning": "married couple"
   },
   {
@@ -6441,7 +6441,7 @@
   },
   {
     "kanji": "貯金",
-    "reading": "ちょうきん",
+    "reading": "ちょきん",
     "meaning": "savings"
   },
   {
@@ -6531,7 +6531,7 @@
   },
   {
     "kanji": "散歩",
-    "reading": "さぽ",
+    "reading": "さんぽ",
     "meaning": "walk,stroll"
   },
   {
@@ -6736,7 +6736,7 @@
   },
   {
     "kanji": "免許証",
-    "reading": "めんきょうしょう",
+    "reading": "めんきょしょう",
     "meaning": "license"
   },
   {
@@ -6836,7 +6836,7 @@
   },
   {
     "kanji": "柔道",
-    "reading": "じゅど",
+    "reading": "じゅうどう",
     "meaning": "judo(martial art)"
   },
   {
@@ -8551,7 +8551,7 @@
   },
   {
     "kanji": "大通り",
-    "reading": "おうどうり",
+    "reading": "おおどおり",
     "meaning": "main street"
   },
   {
@@ -10091,7 +10091,7 @@
   },
   {
     "kanji": "回数券",
-    "reading": "かいすけん",
+    "reading": "かいすうけん",
     "meaning": "book of tickets"
   },
   {
@@ -10276,7 +10276,7 @@
   },
   {
     "kanji": "運営",
-    "reading": "うねい",
+    "reading": "うんえい",
     "meaning": "operation, management"
   },
   {
@@ -14093,6 +14093,21 @@
 {"kanji":"機嫌","reading":"きげん","meaning":"mood, health"},
 {"kanji":"好き嫌い","reading":"すききらい","meaning":"likes and dislikes, taste"},
 {"kanji":"抗議","reading":"こうぎ","meaning":"protest, remonstrance"},
-{"kanji":"素敵","reading":"すてき","meaning":"lovely, nice"}
+{"kanji":"素敵","reading":"すてき","meaning":"lovely, nice"},
+
+{"kanji":"脅かす","reading":"おどかす","meaning":"threaten"},
+{"kanji":"権威","reading":"けんい","meaning":"authority, power"},
+{"kanji":"威張る","reading":"いばる","meaning":"put on airs, be arrogant"},
+{"kanji":"情勢","reading":"じょうせい","meaning":"state of things, situation"},
+{"kanji":"勢力","reading":"せいりょく","meaning":"influence, power"},
+{"kanji":"勢い","reading":"いきおい","meaning":"vigor, momentum"},
+{"kanji":"恐れ","reading":"おそれ","meaning":"fear, risk"},
+{"kanji":"恐れる","reading":"おそれる","meaning":"fear, apprehend"},
+{"kanji":"恐らく","reading":"おそらく","meaning":"probably"},
+{"kanji":"怖がる","reading":"こわがる","meaning":"be afraid, fear"},
+{"kanji":"巨大","reading":"きょだい","meaning":"huge, gigantic"},
+{"kanji":"拒否","reading":"きょひ","meaning":"denial, rejection"},
+{"kanji":"系列","reading":"けいれつ","meaning":"affiliation"}
+
 
 ]
