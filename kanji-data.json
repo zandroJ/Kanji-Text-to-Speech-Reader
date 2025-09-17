@@ -14737,7 +14737,32 @@
 {"kanji":"都会","reading":"とかい","meaning":"city, town"},
 {"kanji":"都","reading":"みヤコ","meaning":"capital, city"},
 {"kanji":"様子","reading":"ようす","meaning":"appearance, aspect"},
-{"kanji":"物価","reading":"ぶっか","meaning":"prices"}
+{"kanji":"物価","reading":"ぶっか","meaning":"prices"},
+
+{"kanji":"物体","reading":"ぶったい","meaning":"object, physical body"},
+{"kanji":"本物","reading":"ほんもの","meaning":"real thing, genuine article"},
+{"kanji":"物理","reading":"ぶつり","meaning":"physics, natural law"},
+{"kanji":"物事","reading":"ものごと","meaning":"things, everything"},
+{"kanji":"名物","reading":"めいぶつ","meaning":"specialty, noted product"},
+{"kanji":"物知り","reading":"ものしり","meaning":"knowledgeable person, know it all"},
+{"kanji":"物覚え","reading":"ものおぼえ","meaning":"memory"},
+{"kanji":"体重","reading":"たいじゅう","meaning":"body weight"},
+{"kanji":"手軽","reading":"てがる","meaning":"easy, light"},
+{"kanji":"多量","reading":"たりょう","meaning":"large quantity, great deal"},
+{"kanji":"量る","reading":"はかる","meaning":"measure, weigh"},
+{"kanji":"量","reading":"りょう","meaning":"quantity, volume"},
+{"kanji":"大量","reading":"たいりょう","meaning":"large quantity, great volume"},
+{"kanji":"年配","reading":"ねんぱい","meaning":"age, elderly age"},
+{"kanji":"送金","reading":"そうきん","meaning":"money transfer, remittance"},
+{"kanji":"郵送","reading":"ゆうそう","meaning":"mailing"},
+{"kanji":"取り上げる","reading":"とりあげる","meaning":"take up, confiscate"},
+{"kanji":"取り入れる","reading":"とりいれる","meaning":"take in, adopt"},
+{"kanji":"取り決め","reading":"とりきめ","meaning":"decision, agreement"},
+{"kanji":"取れる","reading":"とれる","meaning":"be harvested, be cultivated"},
+{"kanji":"取り消す","reading":"とりけす","meaning":"cancel, nullify"},
+{"kanji":"取消し","reading":"とりけし","meaning":"cancellation, annulment"},
+{"kanji":"届け","reading":"とどけ","meaning":"report, delivery"},
+{"kanji":"待ち合わせ","reading":"まちあわせ","meaning":"waiting, rendez-vous"}
 
 
 
